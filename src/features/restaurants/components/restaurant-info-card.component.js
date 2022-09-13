@@ -4,16 +4,19 @@ import {Card} from 'react-native-paper';
 
 // We must use template `` for this to work
 const Title = styled.Text`
-  padding: 16px;
+  padding: ${props => props.theme.space[3]};
+  color: ${props => props.theme.colors.ui.primary};
+  font-family: ${props => props.theme.fonts.body};
+  font
 `;
 
 const RestaurantCard = styled(Card)`
-  background-color: white;
+  background-color: ${props => props.theme.colors.bg.primary};
 `;
 
 const CoverImage = styled(Card.Cover)`
-  padding: 20px;
-  background-color: white;
+  padding: ${props => props.theme.space[3]};
+  background-color: ${props => props.theme.colors.bg.primary};
 `;
 
 // We need to set restaurant as an empty object by writing = {} so that we can then call the individual properties
