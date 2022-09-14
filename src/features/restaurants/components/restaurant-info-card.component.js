@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Card} from 'react-native-paper';
-import {Text} from 'react-native';
+import {Text, Image} from 'react-native';
 
 // We must use template `` for this to work
 const Title = styled.Text`
@@ -34,6 +34,21 @@ const Rating = styled.View`
   padding-bottom: ${props => props.theme.space[2]};
 `;
 
+const Section = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+const SectionEnd = styled.View`
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+`;
+
+const Open = styled.Text`
+  flex-direction: row;
+`;
+
 // We need to set restaurant as an empty object by writing = {} so that we can then call the individual properties
 export const RestaurantInfoCard = ({restaurant = {}}) => {
   const {
@@ -44,7 +59,7 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
     ],
     address = '100 some random street',
     isOpenNow = true,
-    rating = 3.2,
+    rating = 4,
     isClosedTemporarily = false,
   } = restaurant;
 
@@ -55,11 +70,14 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
       <CoverImage key={name} source={{uri: photos[0]}} />
       <Info>
         <Title>{name}</Title>
-        <Rating>
-          {ratingArray.map(() => (
-            <Text>⭐️</Text>
-          ))}
-        </Rating>
+        <Section>
+          <Rating>
+            {ratingArray.map(() => (
+              <Text>⭐️</Text>
+            ))}
+          </Rating>
+          <SectionEnd>{!isOpenNow && <Text>🔜</Text>}</SectionEnd>
+        </Section>
         <Address>{address}</Address>
       </Info>
     </RestaurantCard>
