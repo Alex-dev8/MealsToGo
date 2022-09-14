@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Card} from 'react-native-paper';
-import {Text, Image} from 'react-native';
+import {Text, Image, View} from 'react-native';
+import {Spacer} from './spacer/spacer.component';
 
 // We must use template `` for this to work
 const Title = styled.Text`
@@ -58,9 +59,9 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
       'https://www.iberdrola.com/documents/20125/39904/real_food_746x419.jpg/0c9185fa-b2dd-e1a6-602c-bca55f68e54e?t=1626673209445',
     ],
     address = '100 some random street',
-    isOpenNow = true,
+    isOpenNow = false,
     rating = 4,
-    isClosedTemporarily = false,
+    isClosedTemporarily = true,
   } = restaurant;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
@@ -72,11 +73,23 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
         <Title>{name}</Title>
         <Section>
           <Rating>
-            {ratingArray.map(() => (
-              <Text>⭐️</Text>
+            {ratingArray.map((val, index) => (
+              <Text key={index}>⭐️</Text>
             ))}
           </Rating>
-          <SectionEnd>{!isOpenNow && <Text>🔜</Text>}</SectionEnd>
+          <SectionEnd>
+            {isClosedTemporarily && (
+              <Text variant="label" style={{color: 'red'}}>
+                CLOSED TEMPORARILY
+              </Text>
+            )}
+            <Spacer position="left" size="large">
+              {!isOpenNow && <Text>🔜</Text>}
+            </Spacer>
+            <Spacer position="left" size="large">
+              <Image style={{width: 15, height: 15}} source={icon} />
+            </Spacer>
+          </SectionEnd>
         </Section>
         <Address>{address}</Address>
       </Info>
