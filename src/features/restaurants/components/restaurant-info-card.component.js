@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Card} from 'react-native-paper';
+import {Text} from 'react-native';
 
 // We must use template `` for this to work
 const Title = styled.Text`
@@ -27,6 +28,12 @@ const Info = styled.View`
   padding: ${props => props.theme.space[3]};
 `;
 
+const Rating = styled.View`
+  flex-direction: row;
+  padding-top: ${props => props.theme.space[2]};
+  padding-bottom: ${props => props.theme.space[2]};
+`;
+
 // We need to set restaurant as an empty object by writing = {} so that we can then call the individual properties
 export const RestaurantInfoCard = ({restaurant = {}}) => {
   const {
@@ -37,15 +44,22 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
     ],
     address = '100 some random street',
     isOpenNow = true,
-    rating = 4,
+    rating = 3.2,
     isClosedTemporarily = false,
   } = restaurant;
+
+  const ratingArray = Array.from(new Array(Math.floor(rating)));
 
   return (
     <RestaurantCard elevation={5}>
       <CoverImage key={name} source={{uri: photos[0]}} />
       <Info>
         <Title>{name}</Title>
+        <Rating>
+          {ratingArray.map(() => (
+            <Text>⭐️</Text>
+          ))}
+        </Rating>
         <Address>{address}</Address>
       </Info>
     </RestaurantCard>
