@@ -16,12 +16,12 @@ import {
 export const RestaurantInfoCard = ({restaurant = {}}) => {
   const {
     name = 'Some Restaurant',
-    icon,
+    icon = 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png',
     photos = [
       'https://www.iberdrola.com/documents/20125/39904/real_food_746x419.jpg/0c9185fa-b2dd-e1a6-602c-bca55f68e54e?t=1626673209445',
     ],
     address = '100 some random street',
-    isOpenNow = false,
+    isOpenNow = true,
     rating = 4,
     isClosedTemporarily = true,
   } = restaurant;
@@ -47,7 +47,7 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
               {!isOpenNow && <Text>🔜</Text>}
             </Spacer>
             <Spacer position="left" size="large">
-              <Icon source={icon} />
+              <Icon source={{uri: icon}} />
             </Spacer>
           </SectionEnd>
         </Section>
