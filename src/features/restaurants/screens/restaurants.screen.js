@@ -3,7 +3,7 @@ import {SafeArea} from '../components/utilities/safe-area.component';
 import {ActivityIndicator, Colors} from 'react-native-paper';
 import {RestaurantInfoCard} from '../components/restaurant-info-card.component';
 import styled from 'styled-components';
-import {FlatList, View} from 'react-native';
+import {FlatList} from 'react-native';
 import {Spacer} from '../components/spacer/spacer.component';
 import {RestaurantsContext} from '../../../services/restaurants/restaurants.context';
 import {Search} from '../components/search.component';
