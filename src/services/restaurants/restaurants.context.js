@@ -29,7 +29,6 @@ export const RestaurantsContextProvider = ({children}) => {
   useEffect(() => {
     retrieveRestaurants();
   }, []);
-  console.log(restaurants);
   return (
     // The three pieces of state that I want to pass are restaurants, isLoading and if there are any errors.
     <RestaurantsContext.Provider value={{restaurants, isLoading, error}}>
