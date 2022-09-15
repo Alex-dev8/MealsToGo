@@ -24,6 +24,7 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
     isOpenNow = true,
     rating = 4,
     isClosedTemporarily = true,
+    placeId,
   } = restaurant;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
@@ -35,8 +36,8 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
         <Text variant="label">{name}</Text>
         <Section>
           <Rating>
-            {ratingArray.map((val, index) => (
-              <Text key={index}>⭐️</Text>
+            {ratingArray.map((_, i) => (
+              <Text key={`star-${placeId}-${i}`}>⭐️</Text>
             ))}
           </Rating>
           <SectionEnd>

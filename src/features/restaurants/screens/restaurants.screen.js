@@ -3,7 +3,7 @@ import {SafeArea} from '../components/utilities/safe-area.component';
 import {ActivityIndicator, Colors} from 'react-native-paper';
 import {RestaurantInfoCard} from '../components/restaurant-info-card.component';
 import styled from 'styled-components';
-import {FlatList} from 'react-native';
+import {FlatList, View} from 'react-native';
 import {Spacer} from '../components/spacer/spacer.component';
 import {RestaurantsContext} from '../../../services/restaurants/restaurants.context';
 import {Search} from '../components/search.component';
@@ -27,7 +27,7 @@ const RestaurantList = styled(FlatList).attrs({
 
 export const RestaurantsScreen = () => {
   // We destructure the RestaurantsContext to get the loading state, any errors and, of course, the restaurants.
-  const {isLoading, error, restaurants} = useContext(RestaurantsContext);
+  const {isLoading, restaurants} = useContext(RestaurantsContext);
   return (
     <SafeArea>
       {isLoading && (
