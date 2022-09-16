@@ -1,15 +1,23 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {RestaurantsScreen} from '../../features/restaurants/screens/restaurants.screen';
+import {RestaurantDetailScreen} from '../../features/restaurants/screens/restaurant-detail.screen';
 
 const RestaurantStack = createStackNavigator();
 
+// Every time we have a stack.Screen, it will pass a prop to the component at the top level. In this case we are automatically passing a prop to RestaurantsScreen
 export const RestaurantsNavigator = () => {
   return (
-    <RestaurantStack.Navigator screenOptions={{headerShown: false}}>
+    <RestaurantStack.Navigator
+      headerMode="none"
+      screenOptions={{...TransitionPresets.ModalPresentationIOS}}>
       <RestaurantStack.Screen
         name="Restaurants"
         component={RestaurantsScreen}
+      />
+      <RestaurantStack.Screen
+        name="RestaurantDetail"
+        component={RestaurantDetailScreen}
       />
     </RestaurantStack.Navigator>
   );
