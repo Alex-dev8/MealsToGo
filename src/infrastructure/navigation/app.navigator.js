@@ -5,6 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Text} from 'react-native';
 import {RestaurantsNavigator} from './restaurants.navigator';
 import {SafeArea} from '../../features/restaurants/components/utilities/safe-area.component';
+import {MapScreen} from '../../features/map/screens/map.screen';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,11 +18,6 @@ const TAB_ICON = {
 const Settings = () => (
   <SafeArea>
     <Text>Settings</Text>
-  </SafeArea>
-);
-const Map = () => (
-  <SafeArea>
-    <Text>Map</Text>
   </SafeArea>
 );
 
@@ -44,7 +40,7 @@ export const AppNavigator = () => (
         inactiveTintColor: 'gray',
       }}>
       <Tab.Screen name="Restaurants" component={RestaurantsNavigator} />
-      <Tab.Screen name="Map" component={Map} />
+      <Tab.Screen name="Map" component={MapScreen} />
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
   </NavigationContainer>
