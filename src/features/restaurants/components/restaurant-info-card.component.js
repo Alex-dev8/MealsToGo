@@ -1,6 +1,7 @@
 import React from 'react';
 import {Spacer} from './spacer/spacer.component';
 import {Text} from './typography/text.component';
+import {Favourite} from './favourites/favourite.component';
 import {
   Icon,
   SectionEnd,
@@ -31,6 +32,7 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
 
   return (
     <RestaurantCard elevation={5}>
+      <Favourite restaurant={restaurant} />
       <CoverImage key={name} source={{uri: photos[0]}} />
       <Info>
         <Text variant="label">{name}</Text>
