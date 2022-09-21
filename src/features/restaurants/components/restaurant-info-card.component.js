@@ -46,12 +46,12 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
             {isClosedTemporarily && (
               <Text variant="error">CLOSED TEMPORARILY</Text>
             )}
-            <Spacer position="left" size="large">
+            {/* <Spacer position="left" size="large">
               {!isOpenNow && <Text>🔜</Text>}
             </Spacer>
             <Spacer position="left" size="large">
               <Icon source={{uri: icon}} />
-            </Spacer>
+            </Spacer> */}
           </SectionEnd>
         </Section>
         <Address>{address}</Address>

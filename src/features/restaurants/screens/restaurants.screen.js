@@ -12,11 +12,11 @@ const Loading = styled(ActivityIndicator)`
   margin-left: -25px;
 `;
 
-const LoadingContainer = styled.View`
-  position: absolute,
-  top: 50%,
-  left: 50%,
-`;
+// const LoadingContainer = styled.View`
+//   position: absolute,
+//   top: 50%,
+//   left: 50%,
+// `;
 
 // .attrs allows us to access the attributes of the styled FlatList and pass props.
 const RestaurantList = styled(FlatList).attrs({
@@ -31,11 +31,11 @@ export const RestaurantsScreen = ({navigation}) => {
   const {isLoading, restaurants} = useContext(RestaurantsContext);
   return (
     <SafeArea>
-      {isLoading && (
+      {/* {isLoading && (
         <LoadingContainer>
           <Loading size={50} animating={true} color={Colors.blue300} />
         </LoadingContainer>
-      )}
+      )} */}
       <Search />
       <RestaurantList
         data={restaurants}
@@ -47,9 +47,9 @@ export const RestaurantsScreen = ({navigation}) => {
                   restaurant: item,
                 })
               }>
-              <Spacer position="bottom" size="large">
+              {/* <Spacer position="bottom" size="large"> */}
                 <RestaurantInfoCard restaurant={item} />
-              </Spacer>
+              {/* </Spacer> */}
             </TouchableOpacity>
           );
         }}
