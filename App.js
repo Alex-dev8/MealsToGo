@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {StatusBar} from 'react-native';
 import {ThemeProvider} from 'styled-components';
 import {theme} from './src/infrastructure/theme';
@@ -9,6 +9,7 @@ import {FavouritesContextProvider} from './src/services/favourites/favourites.co
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
+import {AuthenticationContextProvider} from './src/services/authentication/authentication.context';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCLLnFBt2ZXL7Vydh4lQj8iuhdZbnQOuIo',
@@ -22,32 +23,18 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export default function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword('email@email.com', 'test123')
-        .then(user => {
-          setIsAuthenticated(true);
-        })
-        .catch(e => {});
-    }, 2000);
-  }, []);
-
-  if (!isAuthenticated) {
-    return null;
-  }
   return (
     <>
       <ThemeProvider theme={theme}>
-        <FavouritesContextProvider>
-          <LocationContextProvider>
-            <RestaurantsContextProvider>
-              <Navigation />
-            </RestaurantsContextProvider>
-          </LocationContextProvider>
-        </FavouritesContextProvider>
+        <AuthenticationContextProvider>
+          <FavouritesContextProvider>
+            <LocationContextProvider>
+              <RestaurantsContextProvider>
+                <Navigation />
+              </RestaurantsContextProvider>
+            </LocationContextProvider>
+          </FavouritesContextProvider>
+        </AuthenticationContextProvider>
       </ThemeProvider>
       <StatusBar style="auto" />
     </>
