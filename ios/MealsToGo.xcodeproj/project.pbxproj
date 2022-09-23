@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* MealsToGoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MealsToGoTests.m */; };
-		03990145CF639DF00171530B /* Pods_MealsToGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECB45259A6351F87C588AB3 /* Pods_MealsToGo.framework */; };
+		1052743175E01B89E25ADCFA /* libPods-MealsToGo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C9089B2E15BB2A78B3E0CF /* libPods-MealsToGo.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		7854F6352854C78CC2652503 /* libPods-MealsToGo-MealsToGoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE9979C3CADAF43CC1CCF78 /* libPods-MealsToGo-MealsToGoTests.a */; };
 		FA00DE4028D1985600390CA8 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3F911F483834B13ABFE21E2 /* Lato-Black.ttf */; };
 		FA00DE4128D1985600390CA8 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF8FC486D22649D1B85BF9C4 /* Oswald-Bold.ttf */; };
 		FA00DE4228D1985600390CA8 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02248BE1BD074F52A7F0B28A /* Oswald-Regular.ttf */; };
@@ -27,7 +28,6 @@
 		FA00DE4D28D1985600390CA8 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4942E89AB6944BB8B8939831 /* Lato-Thin.ttf */; };
 		FA00DE4E28D1985600390CA8 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF827ACC8B843529483A682 /* Lato-LightItalic.ttf */; };
 		FA00DE4F28D1985600390CA8 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DCFAF39E27B4F9AB02E7E32 /* Lato-Italic.ttf */; };
-		FC8E4EC10DF3E9CB0AAF271F /* Pods_MealsToGo_MealsToGoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747E13A928AB4832649D385C /* Pods_MealsToGo_MealsToGoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,6 @@
 		5B7EB9410499542E8C5724F5 /* Pods-MealsToGo-MealsToGoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsToGo-MealsToGoTests.debug.xcconfig"; path = "Target Support Files/Pods-MealsToGo-MealsToGoTests/Pods-MealsToGo-MealsToGoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5FAFAE5644D74EF2A59E2E0D /* Oswald-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Oswald-Light.ttf"; path = "../src/assets/fonts/Oswald-Light.ttf"; sourceTree = "<group>"; };
 		69779A2C6E1347DAB34A93E6 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Oswald-SemiBold.ttf"; path = "../src/assets/fonts/Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
-		747E13A928AB4832649D385C /* Pods_MealsToGo_MealsToGoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealsToGo_MealsToGoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BB3EEEF7214D1C8135409E /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/assets/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MealsToGo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-MealsToGo-MealsToGoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealsToGo-MealsToGoTests.release.xcconfig"; path = "Target Support Files/Pods-MealsToGo-MealsToGoTests/Pods-MealsToGo-MealsToGoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,7 +70,9 @@
 		CEF827ACC8B843529483A682 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../src/assets/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		D3D6CA189A444645B10526F1 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BlackItalic.ttf"; path = "../src/assets/fonts/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		D3F911F483834B13ABFE21E2 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../src/assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
+		DFE9979C3CADAF43CC1CCF78 /* libPods-MealsToGo-MealsToGoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MealsToGo-MealsToGoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2895013789F438CA2B0D1DE /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../src/assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		E8C9089B2E15BB2A78B3E0CF /* libPods-MealsToGo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MealsToGo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAB3209F28CB6FD300F81BE0 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		FAB320A028CB6FD300F81BE0 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		FAB320AC28CB6FD300F81BE0 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		FAB320AD28CB6FD300F81BE0 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		FAB320AE28CB6FD300F81BE0 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		FECB45259A6351F87C588AB3 /* Pods_MealsToGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealsToGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC8E4EC10DF3E9CB0AAF271F /* Pods_MealsToGo_MealsToGoTests.framework in Frameworks */,
+				7854F6352854C78CC2652503 /* libPods-MealsToGo-MealsToGoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03990145CF639DF00171530B /* Pods_MealsToGo.framework in Frameworks */,
+				1052743175E01B89E25ADCFA /* libPods-MealsToGo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				FECB45259A6351F87C588AB3 /* Pods_MealsToGo.framework */,
-				747E13A928AB4832649D385C /* Pods_MealsToGo_MealsToGoTests.framework */,
+				E8C9089B2E15BB2A78B3E0CF /* libPods-MealsToGo.a */,
+				DFE9979C3CADAF43CC1CCF78 /* libPods-MealsToGo-MealsToGoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
